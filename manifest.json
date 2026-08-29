@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Batch Comment Remover",
+  "version": "1.0.0",
+  "description": "Automated batch comment remover with configurable parameters and real-time logs.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Batch Comment Remover",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

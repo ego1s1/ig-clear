@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Remover</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="terminal">
+    <!-- Header -->
+    <div class="terminal-bar">
+      <div class="terminal-title">
+        <span class="prompt">$</span> batch-remover
+      </div>
+      <div id="status-badge" class="badge idle">
+        <span id="status-text">IDLE</span>
+      </div>
+    </div>
+
+    <!-- Parameters Configuration -->
+    <div class="config-panel">
+      <div class="panel-label"># PARAMETERS</div>
+      
+      <div class="form-grid">
+        <div class="field">
+          <label for="batch-size">BATCH_SIZE</label>
+          <div class="input-box">
+            <input type="number" id="batch-size" value="5" min="1" max="500">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cooldown-every">COOLDOWN_EVERY</label>
+          <div class="input-box">
+            <input type="number" id="cooldown-every" value="10" min="1" max="1000">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cooldown-ms">COOLDOWN_MS</label>
+          <div class="input-box">
+            <input type="number" id="cooldown-ms" value="120000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="min-delay">MIN_DELAY</label>
+          <div class="input-box">
+            <input type="number" id="min-delay" value="3000" min="0" step="500">
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="max-delay">MAX_DELAY</label>
+          <div class="input-box">
+            <input type="number" id="max-delay" value="8000" min="0" step="500">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Controls -->
+    <div class="actions">
+      <button id="start-btn" class="btn btn-start">START</button>
+      <button id="stop-btn" class="btn btn-stop" disabled>STOP</button>
+    </div>
+
+    <!-- Output Logs -->
+    <div class="log-panel">
+      <div class="log-bar">
+        <span class="panel-label"># LOGS</span>
+        <button id="clear-logs-btn" class="btn-clear">CLEAR</button>
+      </div>
+      <div id="log-container" class="log-container">
+        <div class="empty-log">[system] Ready.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
