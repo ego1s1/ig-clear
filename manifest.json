@@ -3,6 +3,14 @@
   "name": "Batch Comment Remover",
   "version": "1.0.0",
   "description": "Automated batch comment remover with configurable parameters and real-time logs.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "batch-comment-remover@priyanshu.dev",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
   "permissions": [
     "activeTab",
     "scripting",
